@@ -1,0 +1,147 @@
+﻿@model IEnumerable<FoodFast.DAL.Models.ProductModel>
+
+<!-- Menu Header -->
+<section class="py-5 mt-5 bg-primary text-white">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold mb-3">Thực Đơn FoodFast</h1>
+                <p class="lead mb-0">Khám phá hương vị Việt Nam đặc sắc với hơn 50 món ăn ngon</p>
+            </div>
+            <div class="col-lg-4 text-end">
+                <i class="fas fa-utensils fa-5x opacity-50"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Search and Filter Section -->
+<section class="py-4 bg-light">
+    <div class="container">
+        <div class="row g-3 align-items-center">
+            <div class="col-md-6">
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-search"></i></span>
+                    <input type="text" class="form-control" id="searchInput" placeholder="Tìm kiếm món ăn...">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <select class="form-select" id="categoryFilter">
+                    <option value="">Tất cả danh mục</option>
+                    <option value="1">Phở</option>
+                    <option value="2">Bún</option>
+                    <option value="3">Cơm</option>
+                    <option value="4">Bánh Mì</option>
+                    <option value="5">Nem/Chả Giò</option>
+                    <option value="6">Chè</option>
+                    <option value="7">Nước Uống</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select class="form-select" id="priceFilter">
+                    <option value="">Tất cả giá</option>
+                    <option value="0-50000">Dưới 50.000đ</option>
+                    <option value="50000-100000">50.000đ - 100.000đ</option>
+                    <option value="100000-200000">100.000đ - 200.000đ</option>
+                    <option value="200000-999999">Trên 200.000đ</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Menu Items -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Sidebar Categories -->
+            <div class="col-lg-3 mb-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0"><i class="fas fa-list me-2"></i>Danh Mục</h5>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="list-group list-group-flush">
+                            <button class="list-group-item list-group-item-action category-btn active" data-category="">
+                                <i class="fas fa-th-large me-2"></i>Tất cả món ăn
+                                <span class="badge bg-primary rounded-pill float-end" id="totalCount">0</span>
+                            </button>
+                            <button class="list-group-item list-group-item-action category-btn" data-category="1">
+                                <i class="fas fa-bowl-food me-2"></i>Phở
+                                <span class="badge bg-secondary rounded-pill float-end">3</span>
+                            </button>
+                            <button class="list-group-item list-group-item-action category-btn" data-category="2">
+                                <i class="fas fa-bowl-rice me-2"></i>Bún
+                                <span class="badge bg-secondary rounded-pill float-end">3</span>
+                            </button>
+                            <button class="list-group-item list-group-item-action category-btn" data-category="3">
+                                <i class="fas fa-rice me-2"></i>Cơm
+                                <span class="badge bg-secondary rounded-pill float-end">3</span>
+                            </button>
+                            <button class="list-group-item list-group-item-action category-btn" data-category="4">
+                                <i class="fas fa-bread-slice me-2"></i>Bánh Mì
+                                <span class="badge bg-secondary rounded-pill float-end">3</span>
+                            </button>
+                            <button class="list-group-item list-group-item-action category-btn" data-category="5">
+                                <i class="fas fa-egg me-2"></i>Nem/Chả Giò
+                                <span class="badge bg-secondary rounded-pill float-end">3</span>
+                            </button>
+                            <button class="list-group-item list-group-item-action category-btn" data-category="6">
+                                <i class="fas fa-ice-cream me-2"></i>Chè
+                                <span class="badge bg-secondary rounded-pill float-end">3</span>
+                            </button>
+                            <button class="list-group-item list-group-item-action category-btn" data-category="7">
+                                <i class="fas fa-glass-water me-2"></i>Nước Uống
+                                <span class="badge bg-secondary rounded-pill float-end">3</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu Items Grid -->
+            <div class="col-lg-9">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h4 class="mb-0">Tất cả món ăn</h4>
+                </div>
+
+                <div class="row g-4" id="menuItemsGrid">
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card dish-card h-100 shadow-sm">
+                                <img src="/images/@item.Image" class="card-img-top" alt="Phở Bò Tái">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <h5 class="card-title mb-0">@item.Name</h5>
+                                        <span class="badge bg-success">Phổ biến</span>
+                                    </div>
+                                    <p class="card-text text-muted">@item.Description</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="h5 text-primary mb-0">@item.Price</span>
+                                            <div class="text-warning">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <small class="text-muted ms-1">(4.8)</small>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-primary btn-sm">
+                                            <i class="fas fa-plus me-1"></i>Thêm
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                   
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
