@@ -151,3 +151,4 @@ C:\Users\ASUS\source\repos\FoodFast\FoodFast\bin\Debug\net8.0\FoodFast.BLL.runti
 C:\Users\ASUS\source\repos\FoodFast\FoodFast\bin\Debug\net8.0\FoodFast.BLL.exe
 C:\Users\ASUS\source\repos\FoodFast\FoodFast\bin\Debug\net8.0\FoodFast.BLL.dll
 C:\Users\ASUS\source\repos\FoodFast\FoodFast\bin\Debug\net8.0\FoodFast.BLL.pdb
+C:\Users\ASUS\source\repos\FoodFast\FoodFast\obj\Debug\net8.0\FoodFast.sourcelink.json

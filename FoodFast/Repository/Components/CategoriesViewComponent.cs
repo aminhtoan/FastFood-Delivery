@@ -1,10 +1,11 @@
 ﻿
 
 using FoodFast.BLL.Category;
+using FoodFast.DAL.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace FoodFast.DAL.Components
+namespace FoodFast.Repository.Components
 {
     public class CategoriesViewComponent : ViewComponent
     {
@@ -13,6 +14,10 @@ namespace FoodFast.DAL.Components
         {
             _categoryBLL = categoryBLL;
         }
-        public async Task<IViewComponentResult> InvokeAsync() => View(await _dataContext.Categories.ToListAsync());
-    }
+		public IViewComponentResult Invoke()
+		{
+			var categories = _categoryBLL.GetAlLCategories();
+			return View(categories);
+		}
+	}
 }

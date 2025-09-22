@@ -2,6 +2,8 @@ using Microsoft.EntityFrameworkCore;
 using FoodFast.DAL.Data;
 using FoodFast.BLL.Product;
 using FoodFast.DAL.Repository.Product;
+using FoodFast.BLL.Category;
+using FoodFast.DAL.Repository.Category;
 
 
 
@@ -17,6 +19,9 @@ builder.Services.AddControllersWithViews();
 // Add Service BLL
 builder.Services.AddScoped<ProductDAL>();
 builder.Services.AddScoped<ProductBLL>();
+// Add Service BLL
+builder.Services.AddScoped<CategoryDAL>();
+builder.Services.AddScoped<CategoryBLL>();
 var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
