@@ -16,6 +16,8 @@ namespace FoodFast.DAL.Models
         [Range(0.0, double.MaxValue)]
         [Column(TypeName = "decimal(8,2)")]
         public decimal Price { get; set; }
+
+        public int CategoryId { get; set; }
         public CategoryModel Category { get; set; }
         public string Image { get; set; }
        

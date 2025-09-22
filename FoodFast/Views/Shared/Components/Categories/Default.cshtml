@@ -1,8 +1,11 @@
 ﻿@model IEnumerable<FoodFast.DAL.Models.CategoryModel>
+
 @foreach (var item in Model)
 {
-    <button class="list-group-item list-group-item-action category-btn" data-category="7">
+    <a class="list-group-item list-group-item-action category-btn"
+       asp-controller="Category"
+       asp-action="Index"
+       asp-route-Slug="@item.Slug">
         <i class="fas fa-glass-water me-2"></i>@item.Name
-        <span class="badge bg-secondary rounded-pill float-end">3</span>
-    </button>
+    </a>
 }

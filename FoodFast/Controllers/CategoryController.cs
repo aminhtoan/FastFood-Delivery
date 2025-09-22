@@ -1,12 +1,28 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FoodFast.BLL.Category;
+using FoodFast.DAL.Repository.Product;
+using Microsoft.AspNetCore.Mvc;
 
 namespace FoodFast.Controllers
 {
 	public class CategoryController : Controller
 	{
-		public IActionResult Index()
-		{
-			return View();
-		}
-	}
+        private readonly CategoryBLL _categoryBLL;
+
+        public CategoryController(CategoryBLL categoryBLL)
+        {
+            _categoryBLL = categoryBLL;
+        }
+        
+        public async Task<IActionResult> Index(string Slug = "")
+        {
+            var products = await _categoryBLL.GetProductsByCategorySlugAsync(Slug);
+
+            if (products.Count == 0)
+            {
+                return RedirectToAction("Index", "Product");
+            }
+
+            return View(products);
+        }
+    }
 }

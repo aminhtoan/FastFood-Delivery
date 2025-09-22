@@ -46,7 +46,7 @@ namespace FoodFast.DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
                 });
 
             modelBuilder.Entity("FoodFast.DAL.Models.ProductModel", b =>
@@ -83,7 +83,7 @@ namespace FoodFast.DAL.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("Products");
+                    b.ToTable("Products", (string)null);
                 });
 
             modelBuilder.Entity("FoodFast.DAL.Models.ProductModel", b =>

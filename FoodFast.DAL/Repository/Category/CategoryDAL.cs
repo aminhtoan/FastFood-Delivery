@@ -1,5 +1,6 @@
 ﻿using FoodFast.DAL.Data;
 using FoodFast.DAL.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 
 namespace FoodFast.DAL.Repository.Category
@@ -17,5 +18,9 @@ namespace FoodFast.DAL.Repository.Category
 		{
 			return _context.Categories.ToList();
 		}
-	}
+        public async Task<CategoryModel?> GetCategoryBySlugAsync(string slug)
+        {
+            return await _context.Categories.FirstOrDefaultAsync(c => c.Slug == slug);
+        }
+    }
 }
