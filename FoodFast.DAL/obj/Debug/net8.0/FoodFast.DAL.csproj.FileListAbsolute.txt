@@ -64,3 +64,4 @@ C:\Users\ASUS\source\repos\FoodFast\FoodFast.DAL\bin\Debug\net8.0\runtimes\win\l
 C:\Users\ASUS\source\repos\FoodFast\FoodFast.DAL\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\ASUS\source\repos\FoodFast\FoodFast.DAL\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\ASUS\source\repos\FoodFast\FoodFast.DAL\obj\Debug\net8.0\FoodFast.DAL.sourcelink.json
+C:\Users\ASUS\source\repos\FoodFast\FoodFast.DAL\bin\Debug\net8.0\Newtonsoft.Json.dll

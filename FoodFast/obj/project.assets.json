@@ -1620,7 +1620,8 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "8.0.7",
           "Microsoft.EntityFrameworkCore.Relational": "8.0.7",
-          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.7"
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.7",
+          "Newtonsoft.Json": "7.0.1"
         },
         "compile": {
           "bin/placeholder/FoodFast.DAL.dll": {}
@@ -4370,9 +4371,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FoodFast\\FoodFast.csproj",
-      "projectName": "FoodFast",
-      "projectPath": "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FoodFast\\FoodFast.csproj",
+      "projectUniqueName": "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FoodFast\\FastFood.UI.csproj",
+      "projectName": "FastFood.UI",
+      "projectPath": "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FoodFast\\FastFood.UI.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FoodFast\\obj\\",
       "projectStyle": "PackageReference",

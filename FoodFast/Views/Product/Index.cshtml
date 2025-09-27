@@ -105,9 +105,9 @@
                                                 <small class="text-muted ms-1">(4.8)</small>
                                             </div>
                                         </div>
-                                        <button class="btn btn-primary btn-sm">
-                                            <i class="fas fa-plus me-1"></i>Thêm
-                                        </button>
+                                        <a class="btn btn-primary btn-sm" asp-controller="Cart" asp-action="Add" asp-route-Id="@item.Id">
+                                            <i class="fas fa-plus me-1"></i>Thêm giỏ hàng
+                                        </a>
                                     </div>
                                 </div>
                             </div>

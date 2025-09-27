@@ -4,6 +4,8 @@ using FoodFast.BLL.Product;
 using FoodFast.DAL.Repository.Product;
 using FoodFast.BLL.Category;
 using FoodFast.DAL.Repository.Category;
+using FoodFast.BLL.Cart;
+using FoodFast.DAL.Repository.Cart;
 
 
 
@@ -16,13 +18,24 @@ builder.Services.AddDbContext<DataContext>(options =>
 });
 //Add service
 builder.Services.AddControllersWithViews();
-// Add Service BLL
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.IsEssential = true;
+});
+// Add Service Product
 builder.Services.AddScoped<ProductDAL>();
 builder.Services.AddScoped<ProductBLL>();
-// Add Service BLL
+// Add Service Category
 builder.Services.AddScoped<CategoryDAL>();
 builder.Services.AddScoped<CategoryBLL>();
+// Add Service Cart
+builder.Services.AddScoped<CartDAL>();
+builder.Services.AddScoped<CartBLL>();
 var app = builder.Build();
+app.UseStatusCodePagesWithRedirects("/Home/Error?statuscode={0}");
+app.UseSession();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {

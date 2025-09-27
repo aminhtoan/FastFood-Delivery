@@ -947,7 +947,8 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "8.0.7",
           "Microsoft.EntityFrameworkCore.Relational": "8.0.7",
-          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.7"
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.7",
+          "Newtonsoft.Json": "7.0.1"
         },
         "runtime": {
           "FoodFast.DAL.dll": {

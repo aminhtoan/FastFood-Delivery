@@ -1,8 +1,8 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FoodFast\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\FoodFast.bundle.scp.css",
-      "PackagePath": "staticwebassets\\FoodFast.bundle.scp.css"
+      "Id": "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FoodFast\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\FastFood.UI.bundle.scp.css",
+      "PackagePath": "staticwebassets\\FastFood.UI.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FoodFast\\wwwroot\\css\\styles.css",
@@ -253,20 +253,20 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.FoodFast.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.FastFood.UI.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.FoodFast.props",
-      "PackagePath": "build\\FoodFast.props"
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.FastFood.UI.props",
+      "PackagePath": "build\\FastFood.UI.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.FoodFast.props",
-      "PackagePath": "buildMultiTargeting\\FoodFast.props"
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.FastFood.UI.props",
+      "PackagePath": "buildMultiTargeting\\FastFood.UI.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.FoodFast.props",
-      "PackagePath": "buildTransitive\\FoodFast.props"
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.FastFood.UI.props",
+      "PackagePath": "buildTransitive\\FastFood.UI.props"
     }
   ],
   "ElementsToRemove": []

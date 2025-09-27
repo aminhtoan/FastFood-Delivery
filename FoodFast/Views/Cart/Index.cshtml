@@ -1,0 +1,140 @@
+﻿@using FoodFast.DAL.Models.ViewModels
+@model CartItemViewModel  
+<!-- Cart Header -->
+<section class="py-5 mt-5 bg-primary text-white">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold mb-3">Giỏ Hàng Của Bạn</h1>
+                <p class="lead mb-0">Xem lại đơn hàng và tiến hành thanh toán</p>
+            </div>
+            <div class="col-lg-4 text-end">
+                <i class="fas fa-shopping-cart fa-5x opacity-50"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Cart Content -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Cart Items -->
+            <div class="col-lg-8">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-light">
+                        <h5 class="mb-0"><i class="fas fa-list me-2"></i>Món ăn đã chọn</h5>
+                    </div>
+                    <div class="card-body p-0">
+                        @if (Model.CartItems.Count > 0)
+					{
+                            foreach (var item in Model.CartItems)
+                            {
+                                <!-- Cart Item 1 -->
+                                <div class="cart-item border-bottom p-4">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-2">
+                                            <img src="@item.Image" class="img-fluid rounded" alt="Phở Bò Tái">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h6 class="mb-1">@item.ProductName</h6>
+                                           
+                                           
+                                        </div>
+                                        <div class="col-md-2">
+                                            <span class="fw-bold text-primary">@item.Price</span>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="input-group input-group-sm" style="max-width: 120px;">
+                                                <a class="btn btn-outline-secondary" type="button" asp-controller="Cart" asp-action="Decrease" asp-route-Id="@item.ProductId">
+                                                    <i class="fas fa-minus"></i>
+                                                </a>
+                                                <input type="text" class="form-control text-center" value="@item.Quantity" readonly>
+                                                <button class="btn btn-outline-secondary" type="button">
+                                                    <i class="fas fa-plus"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <button class="btn btn-outline-danger btn-sm">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                    }
+
+
+                      
+
+                <!-- Continue Shopping -->
+                <div class="mt-4">
+                    <a href="menu.html" class="btn btn-outline-primary">
+                        <i class="fas fa-arrow-left me-2"></i>Tiếp tục mua sắm
+                    </a>
+                </div>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="col-lg-4">
+                <div class="card shadow-sm sticky-top" style="top: 100px;">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0"><i class="fas fa-receipt me-2"></i>Tóm tắt đơn hàng</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Phở Bò Tái (x2)</span>
+                            <span>130.000đ</span>
+                        </div>
+                      
+                        <!-- Promo Code -->
+                        <div class="mb-3">
+                            <label class="form-label small">Mã giảm giá</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Nhập mã giảm giá">
+                                <button class="btn btn-outline-secondary" type="button">Áp dụng</button>
+                            </div>
+                        </div>
+
+                        <!-- Checkout Button -->
+                        <button class="btn btn-primary w-100 mb-3">
+                            <i class="fas fa-credit-card me-2"></i>Thanh toán
+                        </button>
+
+                        <!-- Payment Methods -->
+                        <div class="text-center">
+                            <small class="text-muted">Phương thức thanh toán</small>
+                            <div class="mt-2">
+                                <i class="fab fa-cc-visa fa-2x text-primary me-2"></i>
+                                <i class="fab fa-cc-mastercard fa-2x text-warning me-2"></i>
+                                <i class="fas fa-money-bill-wave fa-2x text-success"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Delivery Info -->
+                <div class="card shadow-sm mt-4">
+                    <div class="card-header bg-light">
+                        <h6 class="mb-0"><i class="fas fa-truck me-2"></i>Thông tin giao hàng</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="fas fa-clock text-primary me-2"></i>
+                            <small>Thời gian giao: 25-35 phút</small>
+                        </div>
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="fas fa-map-marker-alt text-danger me-2"></i>
+                            <small>123 Đường Nguyễn Huệ, Q1, TP.HCM</small>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-phone text-success me-2"></i>
+                            <small>0123 456 789</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
