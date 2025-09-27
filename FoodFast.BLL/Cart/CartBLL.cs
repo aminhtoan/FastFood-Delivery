@@ -53,5 +53,22 @@ namespace FoodFast.BLL.Cart
 
             return cart;
         }
+        public List<CartItemModel> IncreaseProduct(List<CartItemModel> cart, long productId)
+        {
+            var cartItem = cart.FirstOrDefault(c => c.ProductId == productId);
+            if (cartItem != null)
+            {
+                if (cartItem.Quantity >= 1)
+                {
+                    cartItem.Quantity += 1;
+                }
+                else
+                {
+                    cart.RemoveAll(p => p.ProductId == productId);
+                }
+            }
+
+            return cart;
+        }
     }
 }
