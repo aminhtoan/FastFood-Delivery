@@ -1,0 +1,273 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ASUS\\source\\repos\\FoodFast\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DE3DFC4A-AF2D-4D87-834C-464F33481E2D}|FoodFast\\FastFood.UI.csproj|c:\\users\\asus\\source\\repos\\foodfast\\foodfast\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE3DFC4A-AF2D-4D87-834C-464F33481E2D}|FoodFast\\FastFood.UI.csproj|solutionrelative:foodfast\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{965071B4-6DE0-4B3D-9D95-B25C21DFA51B}|FoodFast.DAL\\FoodFast.DAL.csproj|c:\\users\\asus\\source\\repos\\foodfast\\foodfast.dal\\repository\\product\\productdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{965071B4-6DE0-4B3D-9D95-B25C21DFA51B}|FoodFast.DAL\\FoodFast.DAL.csproj|solutionrelative:foodfast.dal\\repository\\product\\productdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE3DFC4A-AF2D-4D87-834C-464F33481E2D}|FoodFast\\FastFood.UI.csproj|c:\\users\\asus\\source\\repos\\foodfast\\foodfast\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE3DFC4A-AF2D-4D87-834C-464F33481E2D}|FoodFast\\FastFood.UI.csproj|solutionrelative:foodfast\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{965071B4-6DE0-4B3D-9D95-B25C21DFA51B}|FoodFast.DAL\\FoodFast.DAL.csproj|c:\\users\\asus\\source\\repos\\foodfast\\foodfast.dal\\models\\cartitemmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{965071B4-6DE0-4B3D-9D95-B25C21DFA51B}|FoodFast.DAL\\FoodFast.DAL.csproj|solutionrelative:foodfast.dal\\models\\cartitemmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F24F27E4-8BF4-401B-9B7A-C56A40ACFCA6}|FoodFast.BLL\\FoodFast.BLL.csproj|c:\\users\\asus\\source\\repos\\foodfast\\foodfast.bll\\cart\\cartbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F24F27E4-8BF4-401B-9B7A-C56A40ACFCA6}|FoodFast.BLL\\FoodFast.BLL.csproj|solutionrelative:foodfast.bll\\cart\\cartbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE3DFC4A-AF2D-4D87-834C-464F33481E2D}|FoodFast\\FastFood.UI.csproj|c:\\users\\asus\\source\\repos\\foodfast\\foodfast\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE3DFC4A-AF2D-4D87-834C-464F33481E2D}|FoodFast\\FastFood.UI.csproj|solutionrelative:foodfast\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE3DFC4A-AF2D-4D87-834C-464F33481E2D}|FoodFast\\FastFood.UI.csproj|c:\\users\\asus\\source\\repos\\foodfast\\foodfast\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE3DFC4A-AF2D-4D87-834C-464F33481E2D}|FoodFast\\FastFood.UI.csproj|solutionrelative:foodfast\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{965071B4-6DE0-4B3D-9D95-B25C21DFA51B}|FoodFast.DAL\\FoodFast.DAL.csproj|c:\\users\\asus\\source\\repos\\foodfast\\foodfast.dal\\repository\\cart\\cartdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{965071B4-6DE0-4B3D-9D95-B25C21DFA51B}|FoodFast.DAL\\FoodFast.DAL.csproj|solutionrelative:foodfast.dal\\repository\\cart\\cartdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{965071B4-6DE0-4B3D-9D95-B25C21DFA51B}|FoodFast.DAL\\FoodFast.DAL.csproj|c:\\users\\asus\\source\\repos\\foodfast\\foodfast.dal\\repository\\category\\categorydal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{965071B4-6DE0-4B3D-9D95-B25C21DFA51B}|FoodFast.DAL\\FoodFast.DAL.csproj|solutionrelative:foodfast.dal\\repository\\category\\categorydal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{965071B4-6DE0-4B3D-9D95-B25C21DFA51B}|FoodFast.DAL\\FoodFast.DAL.csproj|c:\\users\\asus\\source\\repos\\foodfast\\foodfast.dal\\models\\viewmodels\\cartitemviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{965071B4-6DE0-4B3D-9D95-B25C21DFA51B}|FoodFast.DAL\\FoodFast.DAL.csproj|solutionrelative:foodfast.dal\\models\\viewmodels\\cartitemviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE3DFC4A-AF2D-4D87-834C-464F33481E2D}|FoodFast\\FastFood.UI.csproj|c:\\users\\asus\\source\\repos\\foodfast\\foodfast\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE3DFC4A-AF2D-4D87-834C-464F33481E2D}|FoodFast\\FastFood.UI.csproj|solutionrelative:foodfast\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE3DFC4A-AF2D-4D87-834C-464F33481E2D}|FoodFast\\FastFood.UI.csproj|c:\\users\\asus\\source\\repos\\foodfast\\foodfast\\views\\shared\\components\\categories\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE3DFC4A-AF2D-4D87-834C-464F33481E2D}|FoodFast\\FastFood.UI.csproj|solutionrelative:foodfast\\views\\shared\\components\\categories\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F24F27E4-8BF4-401B-9B7A-C56A40ACFCA6}|FoodFast.BLL\\FoodFast.BLL.csproj|c:\\users\\asus\\source\\repos\\foodfast\\foodfast.bll\\product\\productbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F24F27E4-8BF4-401B-9B7A-C56A40ACFCA6}|FoodFast.BLL\\FoodFast.BLL.csproj|solutionrelative:foodfast.bll\\product\\productbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE3DFC4A-AF2D-4D87-834C-464F33481E2D}|FoodFast\\FastFood.UI.csproj|c:\\users\\asus\\source\\repos\\foodfast\\foodfast\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE3DFC4A-AF2D-4D87-834C-464F33481E2D}|FoodFast\\FastFood.UI.csproj|solutionrelative:foodfast\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE3DFC4A-AF2D-4D87-834C-464F33481E2D}|FoodFast\\FastFood.UI.csproj|c:\\users\\asus\\source\\repos\\foodfast\\foodfast\\wwwroot\\js\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{DE3DFC4A-AF2D-4D87-834C-464F33481E2D}|FoodFast\\FastFood.UI.csproj|solutionrelative:foodfast\\wwwroot\\js\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FoodFast\\Views\\Cart\\Index.cshtml",
+              "RelativeDocumentMoniker": "FoodFast\\Views\\Cart\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FoodFast\\Views\\Cart\\Index.cshtml",
+              "RelativeToolTip": "FoodFast\\Views\\Cart\\Index.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADAAAACsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-27T08:58:44.011Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductDAL.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FoodFast.DAL\\Repository\\Product\\ProductDAL.cs",
+              "RelativeDocumentMoniker": "FoodFast.DAL\\Repository\\Product\\ProductDAL.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FoodFast.DAL\\Repository\\Product\\ProductDAL.cs",
+              "RelativeToolTip": "FoodFast.DAL\\Repository\\Product\\ProductDAL.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T03:13:21.047Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FoodFast\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "FoodFast\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FoodFast\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "FoodFast\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAF4AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-26T03:13:06.727Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CartItemModel.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FoodFast.DAL\\Models\\CartItemModel.cs",
+              "RelativeDocumentMoniker": "FoodFast.DAL\\Models\\CartItemModel.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FoodFast.DAL\\Models\\CartItemModel.cs",
+              "RelativeToolTip": "FoodFast.DAL\\Models\\CartItemModel.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAUwBkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T02:49:22.877Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CartBLL.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FoodFast.BLL\\Cart\\CartBLL.cs",
+              "RelativeDocumentMoniker": "FoodFast.BLL\\Cart\\CartBLL.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FoodFast.BLL\\Cart\\CartBLL.cs",
+              "RelativeToolTip": "FoodFast.BLL\\Cart\\CartBLL.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAgwDYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T03:27:16.244Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FoodFast\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "FoodFast\\Controllers\\CartController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FoodFast\\Controllers\\CartController.cs",
+              "RelativeToolTip": "FoodFast\\Controllers\\CartController.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAQwDUAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T03:07:22.52Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FoodFast\\Program.cs",
+              "RelativeDocumentMoniker": "FoodFast\\Program.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FoodFast\\Program.cs",
+              "RelativeToolTip": "FoodFast\\Program.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T14:08:59.203Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CartDAL.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FoodFast.DAL\\Repository\\Cart\\CartDAL.cs",
+              "RelativeDocumentMoniker": "FoodFast.DAL\\Repository\\Cart\\CartDAL.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FoodFast.DAL\\Repository\\Cart\\CartDAL.cs",
+              "RelativeToolTip": "FoodFast.DAL\\Repository\\Cart\\CartDAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T03:20:46.821Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CategoryDAL.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FoodFast.DAL\\Repository\\Category\\CategoryDAL.cs",
+              "RelativeDocumentMoniker": "FoodFast.DAL\\Repository\\Category\\CategoryDAL.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FoodFast.DAL\\Repository\\Category\\CategoryDAL.cs",
+              "RelativeToolTip": "FoodFast.DAL\\Repository\\Category\\CategoryDAL.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T13:53:40.625Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CartItemViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FoodFast.DAL\\Models\\ViewModels\\CartItemViewModel.cs",
+              "RelativeDocumentMoniker": "FoodFast.DAL\\Models\\ViewModels\\CartItemViewModel.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FoodFast.DAL\\Models\\ViewModels\\CartItemViewModel.cs",
+              "RelativeToolTip": "FoodFast.DAL\\Models\\ViewModels\\CartItemViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T03:01:09.081Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FoodFast\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "FoodFast\\Controllers\\CategoryController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FoodFast\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "FoodFast\\Controllers\\CategoryController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T14:23:35.39Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FoodFast\\Views\\Shared\\Components\\Categories\\Default.cshtml",
+              "RelativeDocumentMoniker": "FoodFast\\Views\\Shared\\Components\\Categories\\Default.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FoodFast\\Views\\Shared\\Components\\Categories\\Default.cshtml",
+              "RelativeToolTip": "FoodFast\\Views\\Shared\\Components\\Categories\\Default.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-22T14:19:02.906Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ProductBLL.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FoodFast.BLL\\Product\\ProductBLL.cs",
+              "RelativeDocumentMoniker": "FoodFast.BLL\\Product\\ProductBLL.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FoodFast.BLL\\Product\\ProductBLL.cs",
+              "RelativeToolTip": "FoodFast.BLL\\Product\\ProductBLL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T04:19:27.001Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FoodFast\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "FoodFast\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FoodFast\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "FoodFast\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T12:48:43.606Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "script.js",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FoodFast\\wwwroot\\js\\script.js",
+              "RelativeDocumentMoniker": "FoodFast\\wwwroot\\js\\script.js",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FoodFast\\wwwroot\\js\\script.js",
+              "RelativeToolTip": "FoodFast\\wwwroot\\js\\script.js",
+              "ViewState": "AgIAAFgAAAAAAAAAAAD4vzIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-09-19T12:52:31.506Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
