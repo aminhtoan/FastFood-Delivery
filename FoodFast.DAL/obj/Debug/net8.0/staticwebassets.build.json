@@ -1,11 +1,1 @@
-{
-  "Version": 1,
-  "Hash": "2+p6ME1/bQoeNGdjO1kXI7jiN9jLtwJHSKesaJoEXfw=",
-  "Source": "FoodFast.DAL",
-  "BasePath": "_content/FoodFast.DAL",
-  "Mode": "Default",
-  "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
-}
+{"Version":1,"Hash":"TbGsw0IrWne1gsVqI0is6Gni1dPxkqMX3u05ZHabot0=","Source":"FoodFast.DAL","BasePath":"_content/FoodFast.DAL","Mode":"Default","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}

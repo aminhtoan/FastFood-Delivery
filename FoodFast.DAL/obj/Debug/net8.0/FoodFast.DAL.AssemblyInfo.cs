@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FoodFast.DAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0b90ae61d53dc8736d3877b8810fb66f10e5d642")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+443886f799e359329ab1c4cbfc096653a91271cd")]
 [assembly: System.Reflection.AssemblyProductAttribute("FoodFast.DAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FoodFast.DAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
