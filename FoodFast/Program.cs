@@ -1,4 +1,4 @@
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using FoodFast.DAL.Data;
 using FoodFast.BLL.Product;
 using FoodFast.DAL.Repository.Product;
@@ -50,10 +50,16 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+//Area Route
+app.MapControllerRoute(
+    name: "Areas",
+    pattern: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}");
 
+//Custom Route lưu ý phải đặt trên default
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
 
 
 //SeedingData

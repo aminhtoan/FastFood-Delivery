@@ -152,3 +152,5 @@ C:\Users\ASUS\source\repos\FoodFast\FoodFast\obj\Debug\net8.0\refint\FastFood.UI
 C:\Users\ASUS\source\repos\FoodFast\FoodFast\obj\Debug\net8.0\FastFood.UI.pdb
 C:\Users\ASUS\source\repos\FoodFast\FoodFast\obj\Debug\net8.0\FastFood.UI.genruntimeconfig.cache
 C:\Users\ASUS\source\repos\FoodFast\FoodFast\obj\Debug\net8.0\ref\FastFood.UI.dll
+C:\Users\ASUS\source\repos\FoodFast\FoodFast\obj\Debug\net8.0\scopedcss\Areas\Admin\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\ASUS\source\repos\FoodFast\FoodFast\obj\Debug\net8.0\scopedcss\Areas\Restaurant\Views\Shared\_Layout.cshtml.rz.scp.css
