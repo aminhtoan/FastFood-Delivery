@@ -24,5 +24,23 @@ namespace FoodFast.DAL.Repository.Product
                                  .OrderByDescending(p => p.Id)
                                  .ToListAsync();
         }
+        // Lấy tất cả danh mục
+        public async Task<List<CategoryModel>> GetAllCategoriesAsync()
+        {
+            return await _context.Categories
+                .OrderBy(c => c.Name)
+                .ToListAsync();
+        }
+        public async Task<ProductModel?> GetProductBySlugAsync(string slug)
+        {
+            return await _context.Products
+                .FirstOrDefaultAsync(p => p.Slug == slug);
+        }
+
+        public async Task AddProductAsync(ProductModel product)
+        {
+            _context.Products.Add(product);
+            await _context.SaveChangesAsync();
+        }
     }
 }
