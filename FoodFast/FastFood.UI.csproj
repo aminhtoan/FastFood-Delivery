@@ -25,4 +25,8 @@
     <ProjectReference Include="..\FoodFast.BLL\FoodFast.BLL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\media\products\" />
+  </ItemGroup>
+
 </Project>
