@@ -205,12 +205,14 @@
                                 <td><span class="badge bg-success status-badge">Đang bán</span></td>
                               
                                 <td>
-                                    <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editProductModal">
+                                    <a class="btn btn-sm btn-outline-primary me-1" asp-controller="Product" asp-action="Edit" asp-route-Id="@item.Id">
                                         <i class="fas fa-edit"></i>
-                                    </button>
-                                    <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                    </a>
+                                    <form asp-controller="Product" asp-action="Delete" asp-route-id="@item.Id" method="post" style="display:inline;">
+                                            <button class="btn btn-sm btn-outline-danger" onclick="return confirm('Bạn có chắc muốn xóa sản phẩm này không?');">
                                         <i class="fas fa-trash"></i>
                                     </button>
+                                    </form>
                                 </td>
                             </tr>
                             }

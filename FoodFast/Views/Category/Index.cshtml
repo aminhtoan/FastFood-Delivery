@@ -86,7 +86,7 @@
                     {
                         <div class="col-md-6 col-lg-4">
                             <div class="card dish-card h-100 shadow-sm">
-                                <img src="/images/@item.Image" class="card-img-top" alt="Phở Bò Tái">
+                                <img src="/media/products/@item.Image" class="card-img-top">
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between align-items-start mb-2">
                                         <h5 class="card-title mb-0">@item.Name</h5>
@@ -95,7 +95,7 @@
                                     <p class="card-text text-muted">@item.Description</p>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div>
-                                            <span class="h5 text-primary mb-0">@item.Price</span>
+                                            <span class="h5 text-primary mb-0">@item.Price.ToString("#,##0 VNĐ")</span>
                                             <div class="text-warning">
                                                 <i class="fas fa-star"></i>
                                                 <i class="fas fa-star"></i>
@@ -105,9 +105,9 @@
                                                 <small class="text-muted ms-1">(4.8)</small>
                                             </div>
                                         </div>
-                                        <button class="btn btn-primary btn-sm">
+                                        <a  class="btn btn-primary btn-sm" asp-controller="Cart" asp-action="Add">
                                             <i class="fas fa-plus me-1"></i>Thêm
-                                        </button>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
