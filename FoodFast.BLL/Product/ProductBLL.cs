@@ -18,6 +18,20 @@ namespace FoodFast.BLL.Product
             // Có thể xử lý thêm nghiệp vụ ở đây (lọc, sắp xếp,…)
             return _productDAL.GetAllProducts();
         }
+        // Lấy sản phẩm theo ID
+        public async Task<ProductModel?> GetProductByIdAsync(long id)
+        {
+            try
+            {
+                return await _productDAL.GetProductByIdAsync(id);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi khi lấy thông tin sản phẩm: " + ex.Message);
+            }
+        }
+
+
         // Lấy tất cả danh mục
         public async Task<List<CategoryModel>> GetAllCategoriesAsync()
         {
@@ -63,6 +77,92 @@ namespace FoodFast.BLL.Product
             catch (Exception ex)
             {
                 return (false, "Lỗi khi thêm sản phẩm: " + ex.Message);
+            }
+        }
+        // Cập nhật sản phẩm
+        public async Task<(bool IsSuccess, string Message)> UpdateProductAsync(ProductModel product)
+        {
+            try
+            {
+                var existingProduct = await _productDAL.GetProductByIdAsync(product.Id);
+                if (existingProduct == null)
+                {
+                    return (false, "Không tìm thấy sản phẩm");
+                }
+
+                // Tạo slug mới nếu tên thay đổi
+                product.Slug = GenerateSlug(product.Name);
+
+                // Kiểm tra slug trùng (ngoại trừ chính nó)
+                var duplicateSlug = await _productDAL.GetProductBySlugAsync(product.Slug);
+                if (duplicateSlug != null && duplicateSlug.Id != product.Id)
+                {
+                    return (false, "Tên sản phẩm này đã tồn tại");
+                }
+
+                // Xử lý upload ảnh mới
+                if (product.ImageUpload != null)
+                {
+                    // Xóa ảnh cũ
+                    if (!string.IsNullOrEmpty(existingProduct.Image))
+                    {
+                        DeleteImage(existingProduct.Image);
+                    }
+
+                    // Lưu ảnh mới
+                    var imageResult = await SaveImageAsync(product.ImageUpload);
+                    if (!imageResult.IsSuccess)
+                    {
+                        return imageResult;
+                    }
+                    existingProduct.Image = imageResult.Message;
+                }
+                else
+                {
+                    // Giữ nguyên ảnh cũ
+                    product.Image = existingProduct.Image;
+                }
+                existingProduct.Name = product.Name;
+                existingProduct.Slug = product.Slug;
+                existingProduct.Price = product.Price;
+                existingProduct.Description = product.Description;
+                existingProduct.CategoryId = product.CategoryId;
+                // Cập nhật sản phẩm
+                await _productDAL.UpdateProductAsync(existingProduct);
+
+                return (true, "Cập nhật sản phẩm thành công!");
+            }
+            catch (Exception ex)
+            {
+                return (false, "Lỗi khi cập nhật sản phẩm: " + ex.Message);
+            }
+        }
+
+        // Xóa sản phẩm
+        public async Task<(bool IsSuccess, string Message)> DeleteProductAsync(long id)
+        {
+            try
+            {
+                var product = await _productDAL.GetProductByIdAsync(id);
+                if (product == null)
+                {
+                    return (false, "Không tìm thấy sản phẩm");
+                }
+
+                // Xóa ảnh
+                if (!string.IsNullOrEmpty(product.Image))
+                {
+                    DeleteImage(product.Image);
+                }
+
+                // Xóa sản phẩm
+                await _productDAL.DeleteProductAsync(id);
+
+                return (true, "Xóa sản phẩm thành công!");
+            }
+            catch (Exception ex)
+            {
+                return (false, "Lỗi khi xóa sản phẩm: " + ex.Message);
             }
         }
         private async Task<(bool IsSuccess, string Message)> SaveImageAsync(IFormFile imageFile)
@@ -130,6 +230,21 @@ namespace FoodFast.BLL.Product
                        .Replace("ú", "u").Replace("ù", "u").Replace("ủ", "u").Replace("ũ", "u").Replace("ụ", "u")
                        .Replace("ư", "u").Replace("ứ", "u").Replace("ừ", "u").Replace("ử", "u").Replace("ữ", "u").Replace("ự", "u")
                        .Replace("ý", "y").Replace("ỳ", "y").Replace("ỷ", "y").Replace("ỹ", "y").Replace("ỵ", "y");
+        }
+        private void DeleteImage(string imageName)
+        {
+            try
+            {
+                string imagePath = Path.Combine(_webHostEnvironment.WebRootPath, "media/products", imageName);
+                if (File.Exists(imagePath))
+                {
+                    File.Delete(imagePath);
+                }
+            }
+            catch
+            {
+                // Log error nhưng không throw exception
+            }
         }
     }
 }

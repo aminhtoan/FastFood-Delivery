@@ -17,6 +17,14 @@ namespace FoodFast.DAL.Repository.Product
         {
             return _context.Products.Include(p => p.Category).ToList();
         }
+        // Lấy sản phẩm theo ID
+        public async Task<ProductModel?> GetProductByIdAsync(long id)
+        {
+            return await _context.Products
+                .Include(p => p.Category)
+                .FirstOrDefaultAsync(p => p.Id == id);
+        }
+
         public async Task<List<ProductModel>> GetProductsByCategoryIdAsync(int categoryId)
         {
             return await _context.Products
@@ -41,6 +49,23 @@ namespace FoodFast.DAL.Repository.Product
         {
             _context.Products.Add(product);
             await _context.SaveChangesAsync();
+        }
+        // Cập nhật sản phẩm
+        public async Task UpdateProductAsync(ProductModel product)
+        {
+            _context.Products.Update(product);
+            await _context.SaveChangesAsync();
+        }
+
+        // Xóa sản phẩm
+        public async Task DeleteProductAsync(long id)
+        {
+            var product = await _context.Products.FindAsync(id);
+            if (product != null)
+            {
+                _context.Products.Remove(product);
+                await _context.SaveChangesAsync();
+            }
         }
     }
 }

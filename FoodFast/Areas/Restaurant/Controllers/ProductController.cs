@@ -67,5 +67,64 @@ namespace FastFood.UI.Areas.Restaurant.Controllers
           
             return View(product);
         }
+        // GET: Product/Edit/5
+        public async Task<IActionResult> Edit(long id)
+        {
+            var product = await _productBLL.GetProductByIdAsync(id);
+            if (product == null)
+            {
+                TempData["error"] = "Không tìm thấy sản phẩm";
+                return RedirectToAction("Index");
+            }
+
+            ViewBag.Categories = new SelectList(await _productBLL.GetAllCategoriesAsync(), "Id", "Name", product.CategoryId);
+           
+            return View(product);
+        }
+
+        // POST: Product/Edit/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(ProductModel product)
+        {
+            if (ModelState.IsValid)
+            {
+                var result = await _productBLL.UpdateProductAsync(product);
+
+                if (result.IsSuccess)
+                {
+                    TempData["success"] = result.Message;
+                    return RedirectToAction("Index", "Product", new { area = "Restaurant" });
+                }
+                else
+                {
+                    TempData["error"] = result.Message;
+                    ModelState.AddModelError("", result.Message);
+                }
+            }
+
+            ViewBag.Categories = new SelectList(await _productBLL.GetAllCategoriesAsync(), "Id", "Name", product.CategoryId);
+            return View(product);
+        }
+
+        // POST: Product/Delete/5
+        [HttpPost]
+       
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Delete(long id)
+        {
+            var result = await _productBLL.DeleteProductAsync(id);
+
+            if (result.IsSuccess)
+            {
+                TempData["success"] = result.Message;
+            }
+            else
+            {
+                TempData["error"] = result.Message;
+            }
+
+            return RedirectToAction("Index", "Product", new { area = "Restaurant" });
+        }
     }
 }
