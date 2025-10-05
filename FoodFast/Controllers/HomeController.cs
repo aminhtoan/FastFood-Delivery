@@ -1,8 +1,8 @@
-using FoodFast.Models;
+using FastFood.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace FoodFast.Controllers
+namespace FastFood.Controllers
 {
     public class HomeController : Controller
     {
@@ -24,9 +24,16 @@ namespace FoodFast.Controllers
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        public IActionResult Error(int statuscode)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            if (statuscode == 404)
+            {
+                return View("NotFound");
+            }
+            else
+            {
+                return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            }
         }
     }
 }

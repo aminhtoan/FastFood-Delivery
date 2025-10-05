@@ -1,11 +1,11 @@
 ﻿
 
-using FoodFast.BLL.Category;
-using FoodFast.DAL.Data;
+using FastFood.BLL.Category;
+using FastFood.DAL.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace FoodFast.Repository.Components
+namespace FastFood.Repository.Components
 {
     public class CategoriesViewComponent : ViewComponent
     {

@@ -1,11 +1,13 @@
 ﻿
 using Microsoft.AspNetCore.Mvc;
 
-using FoodFast.BLL.Cart;
-using FoodFast.DAL.Data;
-using FoodFast.DAL.Models;
+using FastFood.BLL.Cart;
+using FastFood.DAL.Data;
+using FastFood.DAL.Models;
 
-namespace FoodFast.Controllers
+using FastFood.UI.ViewModels;
+
+namespace FastFood.Controllers
 {
     public class CartController : Controller
     {
@@ -19,17 +21,24 @@ namespace FoodFast.Controllers
 
         public IActionResult Index()
         {
-            // Lấy cart từ session
-            List<CartItemModel> cartItems = HttpContext.Session.GetJson<List<CartItemModel>>("Cart")
-                                           ?? new List<CartItemModel>();
+            // 1. Lấy cart từ Session (UI responsibility)
+            var cartItems = HttpContext.Session.GetJson<List<CartItemModel>>("Cart")
+                            ?? new List<CartItemModel>();
 
-            // Gọi BLL xử lý logic
-            var cartVM = _cartBLL.BuildCartViewModel(cartItems);
+            // 2. Gọi BLL để xử lý business (tính tổng tiền)
+            decimal grandTotal = _cartBLL.CalculateGrandTotal(cartItems);
 
-            // Trả về View
+            // 3. Map sang ViewModel
+            var cartVM = new CartItemViewModel
+            {
+                CartItems = cartItems,
+                GrandTotal = grandTotal
+            };
+
+            // 4. Trả về view
             return View(cartVM);
         }
-       
+
         public async Task<IActionResult> Add(long Id)
         {
             // Lấy giỏ hàng từ Session

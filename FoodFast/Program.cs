@@ -1,11 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using FoodFast.DAL.Data;
-using FoodFast.BLL.Product;
-using FoodFast.DAL.Repository.Product;
-using FoodFast.BLL.Category;
-using FoodFast.DAL.Repository.Category;
-using FoodFast.BLL.Cart;
-using FoodFast.DAL.Repository.Cart;
+using FastFood.DAL.Data;
+using FastFood.BLL.Product;
+using FastFood.DAL.Repository.Product;
+using FastFood.BLL.Category;
+using FastFood.DAL.Repository.Category;
+using FastFood.BLL.Cart;
+using FastFood.DAL.Repository.Cart;
 
 
 
@@ -54,6 +54,10 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "Areas",
     pattern: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}");
+app.MapControllerRoute(
+    name: "category",
+    pattern: "/category/{Slug?}",
+    defaults: new { controller = "Category", action = "Index" });
 
 //Custom Route lưu ý phải đặt trên default
 app.MapControllerRoute(

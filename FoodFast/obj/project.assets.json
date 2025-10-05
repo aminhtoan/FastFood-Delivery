@@ -1598,40 +1598,33 @@
           }
         }
       },
-      "FoodFast.BLL/1.0.0": {
+      "FastFood.BLL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "FoodFast.DAL": "1.0.0"
+          "FastFood.DAL": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/FoodFast.BLL.dll": {}
+          "bin/placeholder/FastFood.BLL.dll": {}
         },
         "runtime": {
-          "bin/placeholder/FoodFast.BLL.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+          "bin/placeholder/FastFood.BLL.dll": {}
+        }
       },
-      "FoodFast.DAL/1.0.0": {
+      "FastFood.DAL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "8.0.7",
-          "Microsoft.EntityFrameworkCore.Relational": "8.0.7",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.7",
           "Newtonsoft.Json": "7.0.1"
         },
         "compile": {
-          "bin/placeholder/FoodFast.DAL.dll": {}
+          "bin/placeholder/FastFood.DAL.dll": {}
         },
         "runtime": {
-          "bin/placeholder/FoodFast.DAL.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+          "bin/placeholder/FastFood.DAL.dll": {}
+        }
       }
     }
   },
@@ -4343,20 +4336,20 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "FoodFast.BLL/1.0.0": {
+    "FastFood.BLL/1.0.0": {
       "type": "project",
-      "path": "../FoodFast.BLL/FoodFast.BLL.csproj",
-      "msbuildProject": "../FoodFast.BLL/FoodFast.BLL.csproj"
+      "path": "../FastFood.BLL/FastFood.BLL.csproj",
+      "msbuildProject": "../FastFood.BLL/FastFood.BLL.csproj"
     },
-    "FoodFast.DAL/1.0.0": {
+    "FastFood.DAL/1.0.0": {
       "type": "project",
-      "path": "../FoodFast.DAL/FoodFast.DAL.csproj",
-      "msbuildProject": "../FoodFast.DAL/FoodFast.DAL.csproj"
+      "path": "../FastFood.DAl/FastFood.DAL.csproj",
+      "msbuildProject": "../FastFood.DAl/FastFood.DAL.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "FoodFast.BLL >= 1.0.0",
+      "FastFood.BLL >= 1.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 8.0.7",
       "Microsoft.EntityFrameworkCore >= 8.0.7",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.7",
@@ -4393,8 +4386,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FoodFast.BLL\\FoodFast.BLL.csproj": {
-              "projectPath": "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FoodFast.BLL\\FoodFast.BLL.csproj"
+            "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FastFood.BLL\\FastFood.BLL.csproj": {
+              "projectPath": "C:\\Users\\ASUS\\source\\repos\\FoodFast\\FastFood.BLL\\FastFood.BLL.csproj"
             }
           }
         }

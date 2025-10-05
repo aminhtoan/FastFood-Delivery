@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FoodFast.BLL\FoodFast.BLL.csproj" />
+    <ProjectReference Include="..\FastFood.BLL\FastFood.BLL.csproj" />
   </ItemGroup>
 
   <ItemGroup>

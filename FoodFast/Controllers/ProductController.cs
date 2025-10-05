@@ -1,8 +1,9 @@
-﻿using FoodFast.BLL.Product;
-using FoodFast.DAL.Models;
+﻿using FastFood.BLL.Product;
+using FastFood.DAL.Models;
+using FastFood.UI.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
-namespace FoodFast.Controllers
+namespace FastFood.UI.Controllers
 {
     public class ProductController : Controller
     {
@@ -10,13 +11,24 @@ namespace FoodFast.Controllers
         public ProductController(ProductBLL productBLL)
         {
             _productBLL = productBLL;
-           
+
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var products = _productBLL.GetAllProducts();
-            
-            return View(products);
+            var products = await _productBLL.GetAllProductsAsync(); // Trả về List<ProductDTO>
+
+            // Map DTO sang ProductViewModel
+            var viewModels = products.Select(p => new ProductViewModel
+            {
+                Id = p.Id,
+                Name = p.Name,
+                Price = p.Price,
+                CategoryId = p.CategoryId,
+                CategoryName = p.CategoryName ?? string.Empty,
+                Image = p.Image
+            }).ToList();
+
+            return View(viewModels);
         }
     }
 }

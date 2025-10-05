@@ -1,4 +1,4 @@
-﻿@model FoodFast.DAL.Models.ProductModel
+﻿@model  FastFood.UI.ViewModels.ProductViewModel
 @{
     ViewData["title"] = "Sửa sản phẩm";
 }
@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quản Lý Menu - FoodFast Restaurant</title>
+    <title>Quản Lý Menu - FastFood Restaurant</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
@@ -121,7 +121,10 @@
                 <div class="text-danger">
                     <span asp-validation-for="ImageUpload"></span>
                 </div>
-                <img id="imgpreview" class="pt-2 img-thumbnail" style="max-width:200px; max-height:200px;" />
+                <img id="imgpreview"
+                     src="@(string.IsNullOrEmpty(Model.Image) ? "/images/no-image.png" : "/media/products/" + Model.Image)"
+                     class="pt-2 img-thumbnail"
+                     style="max-width:200px; max-height:200px;" />
             </div>
 
             <!-- Submit -->
@@ -142,22 +145,34 @@
         function readURL(input) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
-
                 reader.onload = function (e) {
                     $("#imgpreview").attr("src", e.target.result);
                 }
-
-                reader.readAsDataURL(input.files[0]); // convert file to base64 string
+                reader.readAsDataURL(input.files[0]);
             }
         }
 
-        // Gắn sự kiện vào input file, không phải img
-        $("#ImageUpload").change(function () {
+        // Dùng selector theo name cho an toàn
+        $("[name='ImageUpload']").on("change", function () {
             readURL(this);
         });
     </script>
     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var descId = $('textarea[name="Description"]').attr('id');
+            if (descId) {
+                CKEDITOR.replace(descId);
+            }
+        });
+    </script>
+    <script>
         CKEDITOR.replace('Description');
+    </script>
+    <script>
+        $("form").submit(function () {
+            for (var instance in CKEDITOR.instances)
+                CKEDITOR.instances[instance].updateElement();
+        });
     </script>
     <script>
         $(".typing-price").on("keyup", function () {

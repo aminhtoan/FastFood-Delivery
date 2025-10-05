@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FastFood.UI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b9af199c9db04bab5d879ece11e7b21e4009d285")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2497b84d677f4b3244212fad8fb87c4bb8b9366e")]
 [assembly: System.Reflection.AssemblyProductAttribute("FastFood.UI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FastFood.UI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
