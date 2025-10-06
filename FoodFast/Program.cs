@@ -6,6 +6,9 @@ using FastFood.BLL.Category;
 using FastFood.DAL.Repository.Category;
 using FastFood.BLL.Cart;
 using FastFood.DAL.Repository.Cart;
+using FastFood.DAL.Models;
+using Microsoft.AspNetCore.Identity;
+using FastFood.BLL.Account;
 
 
 
@@ -24,6 +27,20 @@ builder.Services.AddSession(options =>
     options.IdleTimeout = TimeSpan.FromMinutes(30);
     options.Cookie.IsEssential = true;
 });
+builder.Services.AddIdentity<AppUserModel, IdentityRole>()
+    .AddEntityFrameworkStores<DataContext>().AddDefaultTokenProviders();
+builder.Services.Configure<IdentityOptions>(options =>
+{
+    // Password settings.
+    options.Password.RequireDigit = true;
+    options.Password.RequireLowercase = true;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequireUppercase = false;
+    options.Password.RequiredLength = 6;
+    // User settings.
+
+    options.User.RequireUniqueEmail = true;
+});
 // Add Service Product
 builder.Services.AddScoped<ProductDAL>();
 builder.Services.AddScoped<ProductBLL>();
@@ -33,6 +50,8 @@ builder.Services.AddScoped<CategoryBLL>();
 // Add Service Cart
 builder.Services.AddScoped<CartDAL>();
 builder.Services.AddScoped<CartBLL>();
+//
+builder.Services.AddScoped<AccountBLL>();
 var app = builder.Build();
 app.UseStatusCodePagesWithRedirects("/Home/Error?statuscode={0}");
 app.UseSession();
@@ -48,7 +67,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseAuthentication();
 app.UseAuthorization();
 //Area Route
 app.MapControllerRoute(
@@ -69,5 +88,10 @@ app.MapControllerRoute(
 //SeedingData
 var context = app.Services.CreateScope().ServiceProvider.GetRequiredService<DataContext>();
 SeedData.SeedingData(context);
-
+//SeedRole
+var roleManager = app.Services.CreateScope().ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+var userManager = app.Services.CreateScope().ServiceProvider.GetRequiredService<UserManager<AppUserModel>>();
+await SeedData.SeedRolesAsync(roleManager);
+await SeedData.SeedAdminAsync(userManager);
+await SeedData.SeedRestaurantAsync(userManager);
 app.Run();

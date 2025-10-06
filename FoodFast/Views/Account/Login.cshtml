@@ -1,4 +1,7 @@
-﻿@{
+﻿@using FastFood.UI.ViewModels
+@model LoginViewModel
+@{
+    Layout = "_AuthLayout";
     ViewData["Title"] = "Đăng nhập - FastFood";
 }
 
@@ -46,19 +49,23 @@
             <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
 
             <div class="mb-3">
-                <label for="Email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="Email" name="Email" placeholder="Nhập email của bạn" required>
+                <label  class="form-label">Tài khoản</label>
+                <input asp-for="Username" type="text" class="form-control"  name="Username" placeholder="Nhập tài khoản của bạn" required>
+                <span asp-validation-for="Username" class="text-danger"></span>
             </div>
 
             <div class="mb-3">
                 <label for="Password" class="form-label">Mật khẩu</label>
-                <input type="password" class="form-control" id="Password" name="Password" placeholder="Nhập mật khẩu" required>
+                <input asp-for="Password" type="password" class="form-control" id="Password" name="Password" placeholder="Nhập mật khẩu" required>
+                <span asp-validation-for="Password" class="text-danger"></span>
             </div>
 
             <div class="d-flex justify-content-between align-items-center mb-3">
                 <div>
-                    <input type="checkbox" id="RememberMe" name="RememberMe">
+                    <input asp-for="RememberMe" type="checkbox" id="RememberMe" name="RememberMe">
+                    
                     <label for="RememberMe" class="ms-1 small text-muted">Ghi nhớ tôi</label>
+
                 </div>
                 <a href="#" class="small text-primary text-decoration-none">Quên mật khẩu?</a>
             </div>

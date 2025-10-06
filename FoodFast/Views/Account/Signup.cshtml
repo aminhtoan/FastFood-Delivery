@@ -1,4 +1,7 @@
-﻿@{
+﻿@using FastFood.UI.ViewModels
+@model SignupViewModel
+@{
+    Layout = "_AuthLayout";
     ViewData["Title"] = "Đăng ký - FastFood";
 }
 
@@ -44,25 +47,38 @@
 
         <form asp-action="Signup" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
-
             <div class="mb-3">
                 <label for="FullName" class="form-label">Họ và tên</label>
-                <input type="text" class="form-control" id="FullName" name="FullName" placeholder="Nhập họ và tên" required>
+                <input asp-for="FullName" type="text" class="form-control" id="FullName" name="FullName" placeholder="Nhập họ và tên" required>
+                <span asp-validation-for="FullName" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label for="Username" class="form-label">Tài khoản</label>
+                <input asp-for="Username" type="text" class="form-control" name="Username" placeholder="Nhập tài khoản" required>
+                <span asp-validation-for="Username" class="text-danger"></span>
             </div>
 
             <div class="mb-3">
                 <label for="Email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="Email" name="Email" placeholder="Nhập email" required>
+                <input asp-for="Email" type="email" class="form-control" id="Email" name="Email" placeholder="Nhập email" required>
+                <span asp-validation-for="Email" class="text-danger"></span>
             </div>
 
             <div class="mb-3">
                 <label for="Password" class="form-label">Mật khẩu</label>
-                <input type="password" class="form-control" id="Password" name="Password" placeholder="Tạo mật khẩu" required>
+                <input asp-for="Password" type="password" class="form-control" id="Password" name="Password" placeholder="Tạo mật khẩu" required>
+                <span asp-validation-for="Password" class="text-danger"></span>
             </div>
 
             <div class="mb-3">
                 <label for="ConfirmPassword" class="form-label">Xác nhận mật khẩu</label>
-                <input type="password" class="form-control" id="ConfirmPassword" name="ConfirmPassword" placeholder="Nhập lại mật khẩu" required>
+                <input asp-for="ConfirmPassword"type="password" class="form-control" id="ConfirmPassword" name="ConfirmPassword" placeholder="Nhập lại mật khẩu" required>
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Số điện thoại</label>
+                <input asp-for="PhoneNumber" type="number" class="form-control"  placeholder="Số điện thoại" required>
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
             </div>
 
             <button type="submit" class="btn btn-primary w-100">Đăng ký</button>
